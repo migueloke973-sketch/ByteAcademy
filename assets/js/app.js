@@ -180,3 +180,57 @@ window.onload = function () {
     }
 
 };
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector(".navbar");
+
+if(window.scrollY>50){
+
+nav.style.background="rgba(7,11,20,.95)";
+
+}else{
+
+nav.style.background="rgba(10,15,30,.55)";
+
+}
+
+});
+/* ================= Loader ================= */
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("loader-hidden");
+
+});
+
+/* ================= Scroll Top ================= */
+
+const scrollBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 400){
+
+        scrollBtn.classList.add("show-btn");
+
+    }else{
+
+        scrollBtn.classList.remove("show-btn");
+
+    }
+
+});
+
+scrollBtn.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});

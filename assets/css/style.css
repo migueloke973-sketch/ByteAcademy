@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =========================================
    BYTEACADEMY - STYLE PRINCIPAL
    Créé par Miguel OKE
@@ -190,267 +191,421 @@ footer hr{
     margin:25px 0;
 
 }
+=======
+/* ===== RESET ===== */
+>>>>>>> b2d9844 (Mise à jour de la page accueil avec hero section)
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-    background:#050816;
-    color:white;
+    font-family:'Poppins',sans-serif;
+    background:#070B14;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-
-/* MENU */
-
-header{
-    position:absolute;
-    width:100%;
-    z-index:10;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 8%;
-}
-
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:25px;
-    font-weight:bold;
-}
-
-
-.logo img{
-    width:55px;
-}
-
-
-nav ul{
-    display:flex;
-    gap:30px;
+ul{
     list-style:none;
 }
 
-
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+img{
+    max-width:100%;
+    display:block;
 }
 
+/* ===== CONTAINER ===== */
 
-nav a:hover{
-    color:#00eaff;
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
 }
 
+/* ===== NAVBAR ===== */
 
+.navbar{
 
-/* HERO */
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
 
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-.hero{
+    padding:20px 8%;
 
-    height:100vh;
+    backdrop-filter:blur(20px);
 
-    background:
-    linear-gradient(
-        rgba(5,8,22,0.75),
-        rgba(5,8,22,0.95)
-    ),
-    url("assets/background.jpg");
+    background:rgba(10,15,30,.55);
 
-    background-size:cover;
-    background-position:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+}
+
+.logo{
 
     display:flex;
     align-items:center;
-    padding:0 8%;
+    gap:12px;
+}
+
+.logo img{
+
+    width:55px;
+}
+
+.logo span{
+
+    font-size:1.5rem;
+    font-weight:700;
 
 }
 
+.nav-links{
 
-
-.content{
-    max-width:650px;
+    display:flex;
+    gap:35px;
 }
 
+.nav-links a{
 
-h1{
+    transition:.3s;
+}
 
-    font-size:60px;
-    line-height:1.1;
-    background:linear-gradient(
-        90deg,
-        #00eaff,
-        #8b5cf6
-    );
+.nav-links a:hover{
 
-    -webkit-background-clip:text;
-    color:transparent;
+    color:#5D8CFF;
+}
+
+.actions{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* ===== BUTTON ===== */
+
+.btn-primary{
+
+    background:linear-gradient(90deg,#3B82F6,#8B5CF6);
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px rgba(90,120,255,.45);
 
 }
 
+.btn-secondary{
 
-.content p{
+    border:2px solid #4F7CFF;
 
-    margin-top:25px;
-    font-size:20px;
-    color:#d1d5db;
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+
+    background:#4F7CFF;
+}
+
+/* ===== SECTION ===== */
+
+section{
+
+    padding:110px 8%;
+}
+/* ================= LOADER ================= */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#070B14;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.8s;
 
 }
 
+#loader img{
 
+    width:120px;
 
-button{
+    animation:float 3s infinite;
 
-    margin-top:35px;
-    padding:15px 35px;
+}
+
+.loader-hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+/* ================= Scroll Top ================= */
+
+#scrollTop{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
     border:none;
-    border-radius:30px;
 
-    background:#00eaff;
-    color:#001018;
+    border-radius:50%;
 
-    font-size:17px;
-    font-weight:bold;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+
+    color:white;
 
     cursor:pointer;
 
-}
+    font-size:20px;
 
+    opacity:0;
 
-button:hover{
+    transform:translateY(30px);
 
-    transform:scale(1.05);
-
-}
-
-
-
-
-/* SECTION */
-
-
-.about{
-
-    padding:80px 8%;
-    text-align:center;
+    transition:.4s;
 
 }
 
+.show-btn{
 
-.about h2{
+    opacity:1 !important;
 
-    font-size:40px;
-    margin-bottom:50px;
-
-}
-
-
-.cards{
-
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+    transform:translateY(0) !important;
 
 }
 
+#scrollTop:hover{
 
-.card{
+    transform:scale(1.1);
 
-    width:300px;
-    padding:30px;
+}
+/* ===== Boutons ===== */
 
-    background:#111827;
+.btn-primary,
+.btn-secondary{
 
-    border-radius:20px;
+    position:relative;
 
-    border:1px solid #1f2937;
-
-    transition:.3s;
+    overflow:hidden;
 
 }
 
+.btn-primary::before,
+.btn-secondary::before{
 
+    content:"";
 
-.card:hover{
+    position:absolute;
 
-    transform:translateY(-10px);
-    border-color:#00eaff;
+    width:40px;
 
+    height:200%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:rotate(30deg);
+
+    left:-80px;
+
+    top:-50%;
+
+    transition:.6s;
+
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before{
+
+    left:140%;
+
+}
+/* ===== HERO SECTION ===== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    background: #080b18;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: slideLeft 1s ease;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #00eaff, #7b2cff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    margin: 25px 0;
+    font-size: 1.1rem;
+    color: #c7c7c7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #00eaff, #7b2cff);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+}
+
+.btn-secondary {
+    border: 2px solid #00eaff;
+    color: #00eaff;
+}
+
+.btn-secondary:hover {
+    background: #00eaff;
+    color: #080b18;
+}
+
+.hero-image img {
+    width: 420px;
+    animation: float 4s ease-in-out infinite;
 }
 
 
+/* ===== ABOUT ===== */
 
-.card p{
+.about {
+    text-align: center;
+    padding: 70px 10%;
+}
 
-    margin-top:15px;
-    color:#cbd5e1;
+.about h2 {
+    font-size: 2.5rem;
+    color: white;
+}
 
+.about p {
+    color: #aaa;
+    max-width: 700px;
+    margin: 20px auto;
 }
 
 
+/* ===== ANIMATIONS ===== */
 
-
-footer{
-
-    text-align:center;
-    padding:25px;
-    background:#020617;
-    color:#94a3b8;
-
-}
-/* ANIMATIONS BYTEACADEMY */
-
-.content{
-    animation: apparition 1.2s ease;
-}
-
-
-.card{
-    animation: apparition 1s ease;
-}
-
-
-@keyframes apparition{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
     }
 
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 
-/* Effet lumineux sur le bouton */
+/* ===== MOBILE ===== */
 
-button{
+@media(max-width:900px) {
 
-    box-shadow:0 0 20px #00eaff;
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
 
-}
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 
+    .hero-image img {
+        width: 300px;
+    }
 
-button:hover{
-
-    box-shadow:
-    0 0 30px #00eaff,
-    0 0 60px #8b5cf6;
-
+    .hero-buttons {
+        justify-content: center;
+    }
 }
